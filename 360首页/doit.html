@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+	<link rel="stylesheet" href="./css/doit.css">
+</head>
+<body>
+	<div id="dowebok">
+		<div class="section">
+			<div class="logo">
+				<img src="images/logo.png" alt=""/>
+			</div>
+			<div class="text">
+				<img src="images/text_1.png" alt=""/>
+				<img src="images/text_2.png" alt=""/>
+				<img src="images/text_3.png" alt=""/>
+				<img src="images/text_4.png" alt=""/>
+				<img src="images/text_5.png" alt=""/>
+				<img src="images/text_6.png" alt=""/>
+				<img src="images/text_7.png" alt=""/>
+				<img src="images/text_8.png" alt=""/>
+			</div>
+			<div class="info">
+				<img src="images/info_1.png" alt=""/>
+			</div>
+		</div>
+		<div class="section">
+			<div class="shield">
+				<img src="images/shield_1.png" alt=""/>
+				<img src="images/shield_2.png" alt=""/>
+				<img src="images/shield_3.png" alt=""/>
+				<img src="images/shield_4.png" alt=""/>
+				<img src="images/shield_5.png" alt=""/>
+				<img src="images/shield_6.png" alt=""/>
+				<img src="images/shield_7.png" alt=""/>
+				<img src="images/shield_8.png" alt=""/>
+				<img src="images/shield_9.png" alt=""/>
+			</div>
+			<div class="info">
+				<img src="images/info_2.png" alt=""/>
+			</div>
+		</div>
+		<div class="section">
+			<div class="info">
+				<img src="images/info_3.png" alt=""/>
+			</div>
+			<div class="circle">
+				<img src="images/circle.png" alt=""/>
+			</div>
+			<div class="rocket">
+				<img src="images/rocket.png" alt=""/>
+			</div>
+		</div>
+		<div class="section">
+			<div class="search">
+				<div class="search-box">
+					<img src="images/search.png" alt=""/>
+				</div>
+				<div class="key">
+					<img src="images/key.png" alt=""/>
+				</div>
+			</div>
+			<div class="result">
+				<img src="images/result.png" alt=""/>
+			</div>
+			<div class="info">
+				<img src="images/info_4.png" alt=""/>
+			</div>
+		</div>
+		<div class="section">
+			<div class="info">
+				<img src="images/info_5.png" alt=""/>
+			</div>
+			<div class="browser">
+				<div class="line lineup"></div>
+				<div class="line linedown"></div>
+				<div class="line lineleft"></div>
+				<div class="line lineright"></div>
+				<div class="toolbar">
+					<img src="images/toolbar.png" alt=""/>
+					<div class="cube"></div>
+				</div>
+				<div class="extra">
+					<img src="images/extra.png" alt=""/>
+					<div class="ex-line"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--引入jquery-->
+	<script src="js/jquery.min.js"></script>
+	<!--全屏切换插件-->
+	<script src="js/jquery.fullpage.min.js"></script>
+	<script>
+		$(function () {
+			$("#dowebok").fullpage({
+				//给每一个section添加背景颜色
+				sectionsColor:['#0da5d6', '#2AB561', '#DE8910', '#16BA9D','#0DA5D6'],
+				css3:true,
+				afterLoad: function () {
+					$(".section").removeClass('current');
+					var _this=$(this);
+					setTimeout(function () {
+						_this.addClass('current');
+					},200)
+				}
+			});
+		});
+
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,250 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+/*'#0da5d6', '#2AB561', '#DE8910', '#16BA9D', '#0DA5D6'*/
+/*设置背景*/
+/*.section:nth-child(1){background: #0da5d6}
+.section:nth-child(2){background: #2AB561}
+.section:nth-child(3){background: #DE8910}
+.section:nth-child(4){background: #16BA9D}
+.section:nth-child(5){background: #0DA5D6}*/
+
+/*第一屏*/
+.section:nth-child(1){
+
+}
+.section:nth-child(1) .logo{
+	text-align: center;
+	padding-top: 100px;
+}
+.section:nth-child(1) .text{
+	text-align: center;
+	margin: 40px 0;
+}
+.section:nth-child(1) .text img{
+	opacity: 0;
+	margin: 0 30px;
+}
+.section:nth-child(1) .info{
+	text-align: center;
+}
+/*第一屏动画*/
+.section:nth-child(1).now .text img{
+	transition: all 2s;
+	opacity: 1;
+	margin: 0 5px;
+}
+
+/*第二屏*/
+.section:nth-child(2){}
+.section:nth-child(2) > div{
+	display: flex;
+	padding: 0 100px;
+}
+.section:nth-child(2) .shield{
+	width: 450px;
+	margin-top: 75px;
+}
+.section:nth-child(2) .shield img:nth-child(1){
+	transform: translateY(100px) rotate(30deg);
+}
+.section:nth-child(2) .info{
+	margin-top: 150px;
+}
+
+/*第二屏动画*/
+.section:nth-child(2).now .shield img:nth-child(1){
+	transition: all 1s;
+	transform:none;
+}
+
+/*第三屏*/
+.section:nth-child(3) > div{
+	display: flex;
+	padding: 0 100px;
+	position: relative;
+	overflow: hidden;
+}
+.section:nth-child(3) .info{
+	margin-top: 200px;
+}
+.section:nth-child(3) .circle{
+	margin-top: 150px;
+}
+.section:nth-child(3) .rocket{
+	position: absolute;
+	left: 580px;
+	bottom: 0;
+	transform: translateY(100%);
+}
+/*第三屏动画*/
+.section:nth-child(3).now .rocket{
+	transition: all 1s;
+	left: 880px;
+	bottom: 420px;
+}
+
+/*第四屏*/
+.section:nth-child(4){}
+.section:nth-child(4) > div{
+	display: flex;
+	padding: 0 100px;
+}
+.section:nth-child(4) .search{
+	margin-top: 140px;
+	position: relative;
+}
+.section:nth-child(4) .search .toolbar{
+	transform: translateX(-200%);
+}
+.section:nth-child(4) .search .keys{
+	position: absolute;
+	left: 20px;
+	top: 23px;
+	width: 0;
+	overflow: hidden;
+}
+.section:nth-child(4) .search .con{
+	position: absolute;
+	left: 0;
+	top: 50px;
+	width: 529px;
+	height: 372px;
+	overflow: hidden;
+}
+.section:nth-child(4) .search .con img{
+	transform: translateY(-100%);
+}
+
+.section:nth-child(4) .info{
+	margin-top: 150px;
+}
+
+/*第四屏动画*/
+.section:nth-child(4).now .search .toolbar{
+	transition: all 1s;
+	transform: none;
+}
+.section:nth-child(4).now .search .keys{
+	animation: word 1.5s 1s steps(5) forwards;
+}
+/*动画*/
+.section:nth-child(4).now .search .con img{
+	transition: all 1s 2.5s;
+	transform: none;
+}
+@keyframes word {
+	from{
+		width: 0;
+	}
+	to{
+		width: 99px;
+	}
+}
+
+/*第五屏*/
+.section:nth-child(5){
+	overflow: hidden;
+}
+.section:nth-child(5) > div{
+	display: flex;
+	flex-direction: column;
+}
+.section:nth-child(5) > div > .info{
+	text-align: center;
+	padding: 30px 0;
+}
+.section:nth-child(5) > div > .browser{
+	/*占满剩余的高度*/
+	flex: 1;
+	width: 1004px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.section:nth-child(5) .other{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+.browser{
+	position: relative;
+}
+.section:nth-child(5) [class^="line_"]{
+	position: absolute;
+	background: rgba(255,255,255,0.5);
+	opacity: 0.5;
+}
+.section:nth-child(5) .line_top{
+
+	height: 1px;
+	width: 100%;
+	transform: translateX(100%);
+}
+.section:nth-child(5) .line_right{
+	width: 1px;
+	height: 100%;
+	right: 0;
+	top: 0;
+	transform: translateY(100%);
+}
+.section:nth-child(5) .line_bottom{
+	height: 1px;
+	width: 100%;
+	left: 0;
+	bottom: 0;
+	transform: translateX(-100%);
+}
+.section:nth-child(5) .line_left{
+	width: 1px;
+	height: 100%;
+	left: 0;
+	top: 0;
+	transform: translateY(-100%);
+}
+.section:nth-child(5) .line_middle{
+	height: 1px;
+	width: 100%;
+	left: 0;
+	bottom: 30px;
+}
+
+.section:nth-child(5) .toolbar{
+	position: absolute;
+	left: 70px;
+	top: 32px;
+	border: 1px solid rgba(255,255,255,0.5);
+	height: 24px;
+	width: 0;
+}
+.section:nth-child(5) .tool{
+	opacity: 0;
+}
+.section:nth-child(5) .other{
+	opacity: 0;
+}
+
+
+	/*第五屏动画*/
+.section:nth-child(5).now [class^="line_"]{
+	transition: all 2s;
+	transform: none;
+	opacity: 1;
+}
+.section:nth-child(5).now .toolbar{
+	transition: all 1s;
+	width: 920px;
+}
+.section:nth-child(5).now .tool{
+	opacity: 1;
+	transition: all 1s;
+}
+.section:nth-child(5).now .other{
+	transition: all 1s;
+	opacity: 1;
+}
+
+
+
+

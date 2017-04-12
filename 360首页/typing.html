@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        p{
+            width:0px;
+            height:18px;
+            background-color: red;
+            line-height: 18px;
+            overflow: hidden;
+            /*
+            animation-timing-function:  linear 
+            特殊的值:setps() 动画一帧一帧的执行
+
+
+            forwards代表属性 animation-fill-mode:  forwards停留在动画结束状态
+            */
+            animation: typing 2.5s steps(5) forwards;
+        }
+        @keyframes typing{
+            from{
+                width:0px;
+            }
+            to{
+                width:80px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <p>智取威虎山</p>
+</body>
+</html>

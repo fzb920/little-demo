@@ -1,0 +1,232 @@
+/*1.默认样式*/
+html,body{
+    margin:0;
+    padding:0;
+}
+
+/*第一屏*/
+.section:nth-child(1){
+
+}
+.section:nth-child(1) .logo{
+    text-align:center;
+    padding-top: 100px;
+}
+.section:nth-child(1) .text{
+    text-align: center;
+    margin:50px 0;
+}
+.section:nth-child(1) .text img{
+    transition:all 1.5s;
+    opacity:0.2;
+    margin:0 30px;
+}
+.section:nth-child(1) .info{
+    margin-top: 120px;
+    text-align: center;
+}
+/*动画部分*/
+.section:nth-child(1).current .text img{
+    opacity:1;
+    margin:0 5px;
+}
+
+/*第二屏*/
+.section:nth-child(2){
+    overflow: hidden;
+}
+.section:nth-child(2) .shield{
+    float: left;
+    width: 420px;
+    margin-top: 120px;
+    margin-left: 110px;
+}
+.section:nth-child(2) .shield img{
+    transition:all 1s;
+    transform:translate(-400px,1000px) rotate(780deg);
+}
+.section:nth-child(2) .info{
+    float: right;
+    margin-top: 130px;
+    margin-right: 130px;
+}
+/*动画部分*/
+.section:nth-child(2).current .shield img{
+    transform:translate(0,0) rotate(0deg);
+}
+
+/*第三屏*/
+.section:nth-child(3){
+    overflow: hidden;
+    position: relative;
+}
+.section:nth-child(3) .info{
+    float: left;
+    margin-top: 150px;
+    margin-left: 90px;
+}
+.section:nth-child(3) .circle{
+    float: right;
+    margin-top: 120px;
+    margin-right: 148px;
+}
+.section:nth-child(3) .rocket{
+    position: absolute;
+    bottom: -210px;
+    right: 540px;
+    transition:all 1s;
+}
+/*动画部分*/
+.section:nth-child(3).current .rocket{
+    bottom: 170px;
+    right: 290px;
+}
+
+/*第四屏*/
+.section:nth-child(4){
+    position: relative;
+    overflow: hidden;
+}
+.section:nth-child(4) .search{
+    float: left;
+    margin-left: 70px;
+    margin-top: 100px;
+    position: relative;
+    transform:translateX(-200%);
+    transition:all 1s;
+}
+.section:nth-child(4) .search .key{
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    overflow: hidden;
+    width: 0;
+}
+.section:nth-child(4) .result{
+    position: absolute;
+    top: -500px;
+    left: 70px;
+}
+.section:nth-child(4) .result img{
+    /*position: absolute;*/
+    /*left: 0;*/
+}
+.section:nth-child(4) .info{
+    float: right;
+    margin-top: 110px;
+    margin-right: 100px;
+}
+/*动画部分*/
+@keyframes typing{
+    from{
+        width:0px;
+    }
+    to{
+        width:99px;
+    }
+}
+/*注意点 .current要连着前面的类名*/
+.section:nth-child(4).current .search{
+    transform: translateX(0);
+}
+.section:nth-child(4).current .search .key{
+    animation:typing 2.5s 1s steps(5) forwards;
+}
+.section:nth-child(4).current .result{
+    transition:all 1s 3.5s;
+    top: 153px;
+}
+
+/*第五屏*/
+.section:nth-child(5){
+    overflow: hidden;
+}
+.section:nth-child(5) .info{
+    text-align: center;
+    padding-top: 20px;
+}
+.section:nth-child(5) .browser{
+    width: 1004px;
+    height: 450px;
+    position: relative;
+    margin:10px auto;
+    /*box-shadow: 0 0 1px #ccc;*/
+}
+.section:nth-child(5) .toolbar{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.section:nth-child(5) .browser .cube{
+    position: absolute;
+    width: 913px;
+    height: 25px;
+    top: 31px;
+    left: 75px;
+    border:1px solid rgba(255,255,255,0.5);
+
+}
+.section:nth-child(5) .browser .extra{
+    width: 1004px;
+    position: absolute;
+    bottom: 30px;
+    right: 0;
+}
+.section:nth-child(5) .browser .extra img{
+    position: absolute;
+    right: 0;
+}
+.section:nth-child(5) .browser .extra .ex-line{
+    position: absolute;
+    bottom: -3px;;
+    width: 1004px;
+    height: 1px;
+    background-color: rgba(255,255,255,0.5);
+}
+.section:nth-child(5) .browser .line{
+    position: absolute;
+    transition:all 1s;
+}
+.section:nth-child(5) .browser .lineup,
+.section:nth-child(5) .browser .linedown{
+    width: 1004px;
+    height: 1px;
+    background-color: rgba(255,255,255,0.5);
+}
+.section:nth-child(5) .browser .lineup{
+    /*top: 0;*/
+    right: -100%;
+}
+.section:nth-child(5) .browser .linedown{
+    bottom: 0;
+    left: -100%;
+}
+.section:nth-child(5) .browser .lineleft,
+.section:nth-child(5) .browser .lineright{
+    width: 1px;
+    height: 450px;
+    background-color: rgba(255,255,255,0.5);
+}
+.section:nth-child(5) .browser .lineleft{
+    left: 0;
+    top: -100%;
+}
+.section:nth-child(5) .browser .lineright{
+    right: 0;
+    bottom:-100%;
+}
+.section:nth-child(5).current .browser .lineup{
+    right: 0;
+}
+.section:nth-child(5).current .browser .linedown{
+    left: 0;
+}
+.section:nth-child(5).current .browser .lineleft{
+    top: 0;
+}
+.section:nth-child(5).current .browser .lineright{
+    bottom: 0;
+}
+
+
+
